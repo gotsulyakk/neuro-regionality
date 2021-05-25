@@ -6,7 +6,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("-s", "--sentences", type=int,
         help="how many sentenses to generate")
-    ap.add_argument("-w", "--words", type=int,
+    ap.add_argument("-c", "--max_chars", type=int,
         help="how many words in sentence")
     args = vars(ap.parse_args())
 
@@ -17,7 +17,7 @@ def main():
     text_model = text_model.compile(inplace=True)
 
     for _ in range(args["sentences"]):
-        print(text_model.make_short_sentence(args["words"]))
+        print(text_model.make_short_sentence(args["max_chars"]))
 
 
 if __name__ == "__main__":
