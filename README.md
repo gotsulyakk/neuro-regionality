@@ -1,6 +1,6 @@
 # neuro-regionality
 
-Generating funny ukrainian news with Markov chains
+Generate funny ukrainian news with Markov chains
 Data parsed from https://t.me/regionality
 
 ## Installation
