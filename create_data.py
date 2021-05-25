@@ -2,7 +2,7 @@ import json
 
 
 def main():
-    with open('channel_messages.json') as f:
+    with open('./data/channel_messages.json') as f:
         raw_data = json.load(f)
     
     text = ""
@@ -10,7 +10,7 @@ def main():
         if "message" in elem:
             text += str(elem["message"] + "\n")
 
-    with open("messages.txt", "w") as f:
+    with open("./data/corpus.txt", "w") as f:
         f.write(text)
 
 

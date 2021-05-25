@@ -1,3 +1,4 @@
+import os
 import json
 import configparser
 from datetime import date, datetime
@@ -53,7 +54,7 @@ async def dump_all_messages(channel):
 		if total_count_limit != 0 and total_messages >= total_count_limit:
 			break
 
-	with open('channel_messages.json', 'w', encoding='utf8') as outfile:
+	with open('./data/channel_messages.json', 'w', encoding='utf8') as outfile:
 		 json.dump(all_messages, outfile, ensure_ascii=False, cls=DateTimeEncoder)
 
 
